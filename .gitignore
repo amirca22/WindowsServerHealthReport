@@ -1,0 +1,13 @@
+# Generated reports
+*.html
+*.csv
+*.json
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# PowerShell history
+ConsoleHost_history.txt
