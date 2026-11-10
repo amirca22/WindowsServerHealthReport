@@ -1,0 +1,36 @@
+name: PowerShell CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+
+    runs-on: windows-latest
+
+    steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Display PowerShell Version
+      shell: pwsh
+      run: |
+        $PSVersionTable
+
+    - name: Install PSScriptAnalyzer
+      shell: pwsh
+      run: |
+        Install-Module PSScriptAnalyzer -Force -Scope CurrentUser
+
+    - name: Analyze Script
+      shell: pwsh
+      run: |
+        Invoke-ScriptAnalyzer `
+          -Path "./Get-ServerHealthReport.ps1"
