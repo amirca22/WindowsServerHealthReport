@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Server health report</title>
+  <style>
+    body { font-family: Segoe UI, Arial, sans-serif; color: #24292f; margin: 2rem auto; max-width: 1100px; padding: 0 1rem; }
+    h1 { margin-bottom: .25rem; }
+    .meta { color: #57606a; }
+    .stats { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    .stat { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; min-width: 140px; padding: 1rem; }
+    .stat strong { display: block; font-size: 1.5rem; }
+    .server { border-top: 2px solid #d0d7de; margin-top: 2rem; padding-top: 1rem; }
+    .badge { border-radius: 1rem; font-size: .75rem; padding: .2rem .6rem; vertical-align: middle; }
+    .success { background: #dafbe1; color: #116329; }
+    .failed { background: #ffebe9; color: #82071e; }
+    table { border-collapse: collapse; margin: .75rem 0 1.5rem; width: 100%; }
+    th, td { border: 1px solid #d0d7de; padding: .55rem; text-align: left; }
+    th { background: #f6f8fa; }
+    .empty { color: #57606a; font-style: italic; }
+    .error { background: #ffebe9; border: 1px solid #ff8182; border-radius: 4px; overflow-wrap: anywhere; padding: 1rem; white-space: pre-wrap; }
+    @media (max-width: 700px) { table { font-size: .85rem; } th, td { padding: .35rem; } }
+  </style>
+</head>
+<body>
+  <h1>Server health report</h1>
+  <p class="meta">Generated 2026-11-10 11:29:02 | Update lookback: 30 days | Servers: 3</p>
+  <div class="stats">
+    <div class="stat"><strong>3</strong>Connected servers</div>
+    <div class="stat"><strong>0</strong>Connection failures</div>
+    <div class="stat"><strong>7</strong>Recent updates</div>
+    <div class="stat"><strong>7</strong>Fixed disks checked</div>
+  </div>
+  <section class="server">
+  <h2>pn1-esg-wiis001 <span class="badge success">Connected</span></h2>
+  <p class="meta">Collected: 2026-11-10 11:29:00</p>
+  <h3>Installed updates in the last 30 days</h3>
+  <table>
+    <thead><tr><th>Hotfix ID</th><th>Description</th><th>Installed</th><th>Installed by</th></tr></thead>
+    <tbody><tr><td>KB5127687</td><td>Update</td><td>2026-10-25 00:00:00</td><td>NT AUTHORITY\SYSTEM</td></tr>
+<tr><td>KB5126655</td><td>Security Update</td><td>2026-10-25 00:00:00</td><td>NT AUTHORITY\SYSTEM</td></tr>
+<tr><td>KB5126654</td><td>Security Update</td><td>2026-10-25 00:00:00</td><td>NT AUTHORITY\SYSTEM</td></tr></tbody>
+  </table>
+  <h3>Fixed disks</h3>
+  <table>
+    <thead><tr><th>Drive</th><th>Volume</th><th>Total</th><th>Free</th><th>Free %</th></tr></thead>
+    <tbody><tr><td>C:</td><td></td><td>59.33 GB</td><td>10.80 GB</td><td>18.2%</td></tr>
+<tr><td>D:</td><td>Temp_D</td><td>59.98 GB</td><td>29.89 GB</td><td>49.8%</td></tr></tbody>
+  </table>
+</section>
+<section class="server">
+  <h2>pn1-esg-wiis002 <span class="badge success">Connected</span></h2>
+  <p class="meta">Collected: 2026-11-10 11:29:01</p>
+  <h3>Installed updates in the last 30 days</h3>
+  <table>
+    <thead><tr><th>Hotfix ID</th><th>Description</th><th>Installed</th><th>Installed by</th></tr></thead>
+    <tbody><tr><td>KB5127687</td><td>Update</td><td>2026-10-25 00:00:00</td><td>NT AUTHORITY\SYSTEM</td></tr></tbody>
+  </table>
+  <h3>Fixed disks</h3>
+  <table>
+    <thead><tr><th>Drive</th><th>Volume</th><th>Total</th><th>Free</th><th>Free %</th></tr></thead>
+    <tbody><tr><td>C:</td><td>pn1-esg-wiis002</td><td>99.90 GB</td><td>38.00 GB</td><td>38.0%</td></tr>
+<tr><td>D:</td><td>Temp_D</td><td>149.98 GB</td><td>57.65 GB</td><td>38.4%</td></tr>
+<tr><td>E:</td><td>Data_E</td><td>99.98 GB</td><td>18.70 GB</td><td>18.7%</td></tr></tbody>
+  </table>
+</section>
+<section class="server">
+  <h2>pn1-gov-wmon001 <span class="badge success">Connected</span></h2>
+  <p class="meta">Collected: 2026-11-10 11:29:02</p>
+  <h3>Installed updates in the last 30 days</h3>
+  <table>
+    <thead><tr><th>Hotfix ID</th><th>Description</th><th>Installed</th><th>Installed by</th></tr></thead>
+    <tbody><tr><td>KB5127687</td><td>Update</td><td>2026-10-25 00:00:00</td><td>NT AUTHORITY\SYSTEM</td></tr>
+<tr><td>KB5126655</td><td>Security Update</td><td>2026-10-25 00:00:00</td><td>NT AUTHORITY\SYSTEM</td></tr>
+<tr><td>KB5126654</td><td>Security Update</td><td>2026-10-25 00:00:00</td><td>NT AUTHORITY\SYSTEM</td></tr></tbody>
+  </table>
+  <h3>Fixed disks</h3>
+  <table>
+    <thead><tr><th>Drive</th><th>Volume</th><th>Total</th><th>Free</th><th>Free %</th></tr></thead>
+    <tbody><tr><td>C:</td><td></td><td>199.90 GB</td><td>126.07 GB</td><td>63.1%</td></tr>
+<tr><td>D:</td><td>Temp_D</td><td>59.98 GB</td><td>44.33 GB</td><td>73.9%</td></tr></tbody>
+  </table>
+</section>
+</body>
+</html>
