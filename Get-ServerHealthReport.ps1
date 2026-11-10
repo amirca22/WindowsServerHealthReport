@@ -133,7 +133,7 @@ $successCount = @($results | Where-Object Success).Count
 $failureCount = $results.Count - $successCount
 $updateCount = @($results | Where-Object Success | ForEach-Object { $_.Updates }).Count
 $diskCount = @($results | Where-Object Success | ForEach-Object { $_.Disks }).Count
-
+$serverCount = $results.Count
 $serverSections = foreach ($result in $results) {
     $serverName = ConvertTo-HtmlText $result.Server
     if (-not $result.Success) {
@@ -223,6 +223,7 @@ $html = @"
   <h1>Server health report</h1>
   <p class="meta">Generated $($generatedAt.ToString('yyyy-MM-dd HH:mm:ss')) | Update lookback: $days days | Servers: $($results.Count)</p>
   <div class="stats">
+    <div class="stat"><strong>$serverCount</strong>Servers checked</div>
     <div class="stat"><strong>$successCount</strong>Connected servers</div>
     <div class="stat"><strong>$failureCount</strong>Connection failures</div>
     <div class="stat"><strong>$updateCount</strong>Recent updates</div>
